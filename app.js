@@ -96,6 +96,22 @@
       document.removeEventListener("visibilitychange", track._onVis);
       track._onVis = null;
     }
+    if (track._onEnter) {
+      track.removeEventListener("mouseenter", track._onEnter);
+      track._onEnter = null;
+    }
+    if (track._onLeave) {
+      track.removeEventListener("mouseleave", track._onLeave);
+      track._onLeave = null;
+    }
+    if (track._onTouchStart) {
+      track.removeEventListener("touchstart", track._onTouchStart);
+      track._onTouchStart = null;
+    }
+    if (track._onTouchEnd) {
+      track.removeEventListener("touchend", track._onTouchEnd);
+      track._onTouchEnd = null;
+    }
 
     track.innerHTML = "";
 
@@ -105,6 +121,9 @@
     // force marquee internal direction for stable loop in RTL pages
     wrap.style.direction = "ltr";
     track.style.direction = "ltr";
+
+    // prevent horizontal overflow caused by transforms on iOS
+    wrap.style.overflow = "hidden";
 
     const buildOneSet = () => {
       const frag = document.createDocumentFragment();
@@ -139,17 +158,24 @@
       if (!items || !items.length) return;
 
       // set 1
-      track.appendChild(buildOneSet());
+      const set1 = document.createElement("div");
+      set1.style.display = "flex";
+      set1.style.gap = "14px";
+      set1.appendChild(buildOneSet());
+      track.appendChild(set1);
 
       // wait for layout + images decode before measuring
       await nextFrame();
       await decodeImages(track);
       await nextFrame();
 
-      singleSetWidth = track.scrollWidth;
+      // measure set1 width precisely (more stable than scrollWidth)
+      singleSetWidth = Math.ceil(set1.getBoundingClientRect().width);
 
       // set 2 (clone)
-      track.appendChild(buildOneSet());
+      const set2 = set1.cloneNode(true);
+      track.appendChild(set2);
+
       await nextFrame();
     };
 
@@ -157,8 +183,11 @@
     let x = 0;
     let last = performance.now();
 
-    const SPEED = 120; // px/sec
-    const DIR = -1;    // always move left visually
+    const isMobile = matchMedia("(max-width: 560px)").matches;
+    const SPEED = isMobile ? 85 : 120; // slower on mobile
+    const DIR = -1; // always move left visually
+
+    let paused = false;
 
     function tick(now){
       const dt = Math.min(0.05, (now - last) / 1000);
@@ -169,11 +198,12 @@
         return;
       }
 
-      x += SPEED * dt;
-      if (x >= singleSetWidth) x -= singleSetWidth;
-
-      const tx = DIR * x;
-      track.style.transform = `translateX(${tx}px)`;
+      if (!paused) {
+        x += SPEED * dt;
+        if (x >= singleSetWidth) x -= singleSetWidth;
+        const tx = DIR * x;
+        track.style.transform = `translateX(${tx}px)`;
+      }
 
       track._rafId = requestAnimationFrame(tick);
     }
@@ -184,6 +214,17 @@
       last = performance.now();
       track._rafId = requestAnimationFrame(tick);
     })();
+
+    // pause on hover / touch (mobile UX)
+    track._onEnter = () => { paused = true; };
+    track._onLeave = () => { paused = false; last = performance.now(); };
+    track.addEventListener("mouseenter", track._onEnter);
+    track.addEventListener("mouseleave", track._onLeave);
+
+    track._onTouchStart = () => { paused = true; };
+    track._onTouchEnd = () => { paused = false; last = performance.now(); };
+    track.addEventListener("touchstart", track._onTouchStart, { passive: true });
+    track.addEventListener("touchend", track._onTouchEnd, { passive: true });
 
     track._onResize = async () => {
       x = 0;
@@ -308,7 +349,7 @@
       whyImg.alt = cfg?.i18n?.[lang]?.why_title || "Why";
     }
 
-    // ✅ WHY: bullets like problem
+    // WHY: bullets like problem
     const whyBox = $("#whyBullets");
     if (whyBox) {
       whyBox.innerHTML = "";
