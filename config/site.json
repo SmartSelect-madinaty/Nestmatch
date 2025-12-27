@@ -29,8 +29,8 @@
 
   "i18n": {
     "ar": {
-      "nav_problem": "لماذا قرار شراء العقار صعب؟",
-      "nav_why": "لماذا Smart Select؟",
+      "nav_problem": "ليه  فيه صعوبة فى شراء العقار ؟",
+      "nav_why": "ليه Smart Select هى الحل ؟",
       "nav_models": "استكشف نماذج العمارات",
       "nav_faq": "الأسئلة الشائعة",
       "nav_contact": "تواصل معنا",
@@ -73,8 +73,6 @@
 
   "content": {
     "ar": {
-      "problemIntro": "بنقدّم تقرير عقاري محايد مبني على بيانات فعلية وتحليل واضح، يساعدك تشوف الصورة كاملة قبل ما تاخد قرار الشراء.",
-
       "problemBullets": [
         "الإعلانات بتوضح المميزات، لكن غالبًا ما بتغفل العيوب المهمة.",
         "مفيش جهة محايدة فعلًا تساعد المشتري ياخد قرار صح.",
@@ -107,8 +105,6 @@
     },
 
     "en": {
-      "problemIntro": "We provide a neutral property report based on actual data and clear analysis, helping you see the full picture before making a purchase decision.",
-
       "problemBullets": [
         "Listings often highlight advantages while hiding key drawbacks.",
         "There is no truly neutral party advising buyers objectively.",
