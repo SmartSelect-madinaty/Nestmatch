@@ -2,6 +2,18 @@
 (() => {
   const $ = (sel) => document.querySelector(sel);
 
+  // ============ Force "go to absolute top" for logo clicks ============
+  function initTopLinks(){
+    document.querySelectorAll(".js-top").forEach(a => {
+      a.addEventListener("click", (e) => {
+        // keep hash clean but ensure true top
+        e.preventDefault();
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        history.replaceState(null, "", "#pageTop");
+      });
+    });
+  }
+
   // ============ Header menu (MOBILE SAFE) ============
   function initHeaderMenu(){
     const menu   = $("#hmenu");
@@ -10,7 +22,6 @@
     const header = document.querySelector(".header");
     if (!menu || !btn || !panel) return;
 
-    // set CSS var for panel top on mobile
     function syncMenuTop(){
       const h = header?.getBoundingClientRect?.().height || 88;
       document.documentElement.style.setProperty("--menuTop", `${Math.round(h)}px`);
@@ -20,7 +31,7 @@
       syncMenuTop();
       menu.classList.add("is-open");
       btn.setAttribute("aria-expanded","true");
-      document.body.classList.add("menu-open"); // prevents background scroll
+      document.body.classList.add("menu-open");
     }
 
     function close(){
@@ -33,33 +44,27 @@
       menu.classList.contains("is-open") ? close() : open();
     }
 
-    // toggle button
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       toggle();
     });
 
-    // ✅ clicking links closes, but clicking inside panel doesn't bubble
     panel.addEventListener("click", (e) => {
       e.stopPropagation();
       const a = e.target.closest("a");
       if (a) close();
     });
 
-    // ✅ stop touch events inside panel so iOS doesn't treat it as outside
     panel.addEventListener("touchstart", (e) => e.stopPropagation(), { passive: true });
     panel.addEventListener("touchmove",  (e) => e.stopPropagation(), { passive: true });
 
-    // close on outside click
     document.addEventListener("click", () => close());
 
-    // close on escape
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") close();
     });
 
-    // keep panel top synced on resize/orientation
     window.addEventListener("resize", () => {
       if (menu.classList.contains("is-open")) syncMenuTop();
     });
@@ -89,7 +94,6 @@
     if (btn) btn.textContent = (lang === "en" ? "AR" : "EN");
   }
 
-  // helpers
   const nextFrame = () => new Promise(r => requestAnimationFrame(() => r()));
   async function decodeImages(rootEl){
     const imgs = Array.from(rootEl.querySelectorAll("img"));
@@ -111,7 +115,6 @@
     const track = $("#cartrack");
     if (!track) return;
 
-    // kill previous animation safely
     if (track._rafId) { cancelAnimationFrame(track._rafId); track._rafId = null; }
     if (track._onResize) { window.removeEventListener("resize", track._onResize); track._onResize = null; }
     if (track._onVis) { document.removeEventListener("visibilitychange", track._onVis); track._onVis = null; }
@@ -122,10 +125,9 @@
 
     track.innerHTML = "";
 
-    const wrap = track.parentElement; // marquee__wrap
+    const wrap = track.parentElement;
     if (!wrap) return;
 
-    // force marquee internal direction for stable loop in RTL pages
     wrap.style.direction = "ltr";
     track.style.direction = "ltr";
     wrap.style.overflow = "hidden";
@@ -162,7 +164,6 @@
 
       if (!items || !items.length) return;
 
-      // set 1
       const set1 = document.createElement("div");
       set1.style.display = "flex";
       set1.style.gap = "14px";
@@ -175,14 +176,12 @@
 
       singleSetWidth = Math.ceil(set1.getBoundingClientRect().width);
 
-      // set 2 (clone)
       const set2 = set1.cloneNode(true);
       track.appendChild(set2);
 
       await nextFrame();
     };
 
-    // Smooth infinite scroll
     let x = 0;
     let last = performance.now();
 
@@ -217,7 +216,6 @@
       track._rafId = requestAnimationFrame(tick);
     })();
 
-    // pause on hover / touch
     track._onEnter = () => { paused = true; };
     track._onLeave = () => { paused = false; last = performance.now(); };
     track.addEventListener("mouseenter", track._onEnter);
@@ -298,7 +296,7 @@
     });
 
     const form = normalizeUrl(cfg?.links?.requestForm) || "https://forms.gle/GsTXZGXXrcypanPd7";
-    ["#ctaTop", "#ctaHero", "#ctaProblem", "#ctaFooter"].forEach(id => {
+    ["#ctaHero", "#ctaProblem", "#ctaFooter"].forEach(id => {
       const el = $(id);
       if (el) el.setAttribute("href", form);
     });
@@ -396,6 +394,7 @@
   loadConfig()
     .then(cfg => {
       setLinks(cfg);
+      initTopLinks();
       initHeaderMenu();
       initLanguage(cfg);
     })
