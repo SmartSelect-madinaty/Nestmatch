@@ -26,6 +26,9 @@ body{
   color: var(--off);
   line-height: 1.65;
   text-rendering: geometricPrecision;
+
+  /* ✅ NEW: compensate for fixed header height */
+  padding-top: 88px;
 }
 
 body.menu-open{
@@ -43,8 +46,12 @@ img{ max-width:100%; display:block; }
 
 /* ================= HEADER (clean) ================= */
 .header{
-  position:sticky;
+  /* ✅ CHANGED: fixed to stay visible always */
+  position:fixed;
   top:0;
+  left:0;
+  right:0;
+
   z-index:50;
   backdrop-filter: blur(12px);
   background: rgba(14,21,39,.66);
@@ -74,7 +81,7 @@ img{ max-width:100%; display:block; }
   height:58px;
 }
 
-/* Center title — NO shadow */
+/* Center title */
 .header__center{
   display:flex;
   align-items:center;
@@ -101,7 +108,7 @@ img{ max-width:100%; display:block; }
 /* ================= MENU ================= */
 .hmenu{ position:relative; }
 
-/* ✅ overlay behind panel */
+/* overlay behind panel */
 .hmenu.is-open::before{
   content:"";
   position:fixed;
@@ -126,7 +133,7 @@ img{ max-width:100%; display:block; }
   gap:8px;
   transition:.18s ease;
   position:relative;
-  z-index:81; /* فوق الـ overlay */
+  z-index:81;
 }
 .hmenu__btn:hover{ background: rgba(245,243,238,.10); }
 .hmenu__chev{ opacity:.9; font-size:12px; }
@@ -134,8 +141,6 @@ img{ max-width:100%; display:block; }
 .hmenu__panel{
   position:absolute;
   top: calc(100% + 10px);
-
-  /* desktop: open inward */
   inset-inline-end: 0;
   inset-inline-start: auto;
 
@@ -170,19 +175,6 @@ img{ max-width:100%; display:block; }
   color: var(--off);
 }
 
-.hmenu__divider{
-  height:1px;
-  background: rgba(208,179,113,.12);
-  margin: 10px 0;
-}
-.hmenu__row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  justify-content:flex-start;
-  padding-top: 4px;
-}
-
 /* Buttons */
 .btn{
   display:inline-flex;
@@ -197,11 +189,6 @@ img{ max-width:100%; display:block; }
   white-space:nowrap;
   font-size:14px;
 }
-.btn--head{
-  height:36px;
-  padding:0 14px;
-  font-size:13px;
-}
 
 .btn--gold{
   color:#1b1f2a;
@@ -213,7 +200,6 @@ img{ max-width:100%; display:block; }
 }
 .btn--gold:hover{ transform: translateY(-1px); }
 
-/* Hero buttons slightly smaller */
 .btn--hero{
   padding: 9px 13px;
   font-size: 13.5px;
@@ -353,29 +339,6 @@ img{ max-width:100%; display:block; }
   margin-top:16px;
 }
 
-/* Cards (still present, harmless even if unused now) */
-.cards{
-  display:grid;
-  gap: 12px;
-  margin-top: 12px;
-}
-.card{
-  border-radius: 16px;
-  border: 1px solid rgba(208,179,113,.14);
-  background: rgba(245,243,238,.05);
-  padding: 14px 14px;
-}
-.card__t{ font-weight:900; margin: 0 0 6px; }
-.card__d{ margin:0; color: rgba(245,243,238,.76); }
-
-.sectionHead{
-  text-align:center;
-  max-width: 760px;
-  margin: 0 auto 18px;
-}
-.muted{ margin: 0; color: rgba(245,243,238,.76); }
-.section--alt .muted{ color: rgba(14,21,39,.70); }
-
 /* ================= MODELS: Continuous marquee ================= */
 .marquee{
   border-radius: var(--radius2);
@@ -493,42 +456,6 @@ img{ max-width:100%; display:block; }
   gap: 10px;
 }
 
-/* ✅ Phone CTA in footer (ONE button only, no extra icon button) */
-.footer__call{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding: 8px 12px;
-  border-radius: 14px;
-  border:1px solid rgba(208,179,113,.18);
-  background: rgba(245,243,238,.05);
-  transition:.18s ease;
-  font-weight: 900;
-  color: var(--off);
-  white-space: nowrap;
-}
-.footer__call:hover{
-  transform: translateY(-1px);
-  background: rgba(245,243,238,.08);
-}
-.footer__callIcon{
-  width:36px;
-  height:36px;
-  border-radius:12px;
-  border:1px solid rgba(208,179,113,.18);
-  background: rgba(245,243,238,.05);
-  display:grid;
-  place-items:center;
-  flex: 0 0 auto;
-}
-.footer__callIcon svg{
-  width:20px;
-  height:20px;
-}
-
-/* ✅ If an old phone icon button exists in footer icons, hide it */
-.footer__icons .iconbtn--phone{ display:none !important; }
-
 /* ================= MOBILE ================= */
 @media (max-width: 980px){
   .header__inner{
@@ -538,11 +465,13 @@ img{ max-width:100%; display:block; }
   .brand__logo{ height:60px; }
   .header__title{ font-size: 16px; letter-spacing: 1.4px; }
   .hero{ min-height: 54vh; }
+
+  /* ✅ NEW: slightly larger padding-top for potential taller header on smaller screens */
+  body{ padding-top: 96px; }
 }
 
 /* ✅ mobile: convert dropdown into safe in-viewport drawer */
 @media (max-width: 560px){
-  .btn--head{ display:none; }
   .header__center{ display:none; }
 
   .header__inner{
@@ -571,18 +500,12 @@ img{ max-width:100%; display:block; }
     z-index: 80;
   }
 
-  /* ✅ phone CTA wraps nicely */
+  /* footer layout */
   .footer__right{
     width:100%;
     justify-content:space-between;
   }
-  .footer__call{
-    flex: 1 1 auto;
-    justify-content:center;
-  }
-}
 
-/* ✅ NEW: Show "Call us" button in header on desktop/tablet, hide it on small mobile */
-@media (max-width: 560px){
-  .btn--callTop{ display:none !important; }
+  /* ✅ NEW: keep padding-top safe on very small screens */
+  body{ padding-top: 96px; }
 }
