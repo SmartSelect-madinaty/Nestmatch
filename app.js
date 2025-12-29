@@ -319,7 +319,7 @@
     const whyImg = $("#whyImg");
     if (whyImg && cfg?.images?.why) {
       whyImg.src = cfg.images.why;
-      whyImg.alt = (lang === "en") ? "Why Smart Select?" : "لماذا Smart Select؟";
+      whyImg.alt = (lang === "en") ? "Why Nest Match?" : "لماذا Nest Match؟";
     }
 
     const whyBox = $("#whyBullets");
@@ -338,7 +338,7 @@
     const copy = $("#footerCopy");
     if (copy) {
       const year = new Date().getFullYear();
-      copy.textContent = `© ${year} Smart Select. All rights reserved.`;
+      copy.textContent = `© ${year} Nest Match. All rights reserved.`;
     }
 
     const note = $("#footerNote");
@@ -371,3 +371,4 @@
       if (hero) hero.textContent = "حدث خطأ في تحميل الإعدادات (site.json). تأكد من وجود الملف في config/site.json.";
     });
 })();
+
