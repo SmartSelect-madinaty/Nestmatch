@@ -451,12 +451,14 @@ section[id]{
 .section--alt .caption{ color: rgba(14,21,39,.78); }
 
 /* ================= FAQ ================= */
+/* ================= FAQ ================= */
 .faq{
   max-width: 860px;
   margin: 0 auto;
   display:grid;
   gap: 10px;
 }
+
 .faqItem{
   border-radius: 16px;
   border: 1px solid rgba(208,179,113,.14);
@@ -472,19 +474,43 @@ section[id]{
   border: none;
   color: var(--off);
   cursor:pointer;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap: 10px;
-  font-weight:900;
+
+  font-weight: 900;
+  font-size: 18px;      /* ✅ السؤال أكبر */
+  line-height: 1.55;
 }
+
+.faqQ span:first-child{
+  flex: 1;
+}
+
 .faqA{
   padding: 0 14px 14px;
   color: rgba(245,243,238,.76);
   display:none;
+
+  font-size: 15px;      /* ✅ الإجابة أصغر */
+  line-height: 1.9;
 }
+
 .faqItem.is-open .faqA{ display:block; }
-.faqIcon{ opacity:.85; font-size: 18px; }
+
+.faqIcon{
+  opacity:.85;
+  font-size: 20px;      /* ✅ علامة + / − واضحة */
+  line-height: 1;
+}
+
+/* موبايل */
+@media (max-width: 560px){
+  .faqQ{ font-size: 16.5px; }
+  .faqA{ font-size: 14.5px; }
+}
 
 /* ================= FOOTER ================= */
 .footer{
@@ -583,4 +609,5 @@ section[id]{
   .btn, .iconbtn{ transition: none; }
   .btn--gold:hover, .iconbtn:hover{ transform: none; }
 }
+
 
