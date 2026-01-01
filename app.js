@@ -444,3 +444,4 @@
       if (hero) hero.textContent = "حدث خطأ في تحميل الإعدادات (site.json). تأكد من وجود الملف في config/site.json.";
     });
 })();
+
