@@ -26,8 +26,9 @@
   <meta property="og:url" content="https://smartselect-madinaty.github.io/Landing/en.html" />
 
   <!-- ✅ OG COVER (Recommended 1200x630 for best preview) -->
-  <meta property="og:image" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png" />
-  <meta property="og:image:secure_url" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png" />
+  <!-- ✅ Cache-bust to refresh WhatsApp/Facebook previews -->
+  <meta property="og:image" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png?v=2" />
+  <meta property="og:image:secure_url" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png?v=2" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/png" />
@@ -41,7 +42,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Nest Match | We don’t sell & we don’t take commissions" />
   <meta name="twitter:description" content="Independent property evaluation in Madinaty. Clear financial & architectural analysis — no selling, no commissions." />
-  <meta name="twitter:image" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png" />
+  <meta name="twitter:image" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png?v=2" />
+  <meta name="twitter:image:src" content="https://smartselect-madinaty.github.io/Landing/assets/og-cover.png?v=2" />
   <meta name="twitter:image:alt" content="Nest Match — Independent property evaluation (financial & architectural)" />
 
   <!-- ✅ Structured Data -->
@@ -121,8 +123,6 @@
             <path fill="#FFFFFF" d="M13.34 20.86v-6.98h1.46l.28-2.88h-1.74V9.82c0-.5.24-.98 1.02-.98h.79V7.3s-.71-.12-1.4-.12c-1.43 0-2.36.86-2.36 2.42v1.2H9.81v2.88h1.58v6.98h1.95z"/>
           </svg>
         </a>
-
-        <!-- ✅ Email removed from header as requested -->
 
         <a class="iconbtn iconbtn--phone" id="callTop" href="tel:+201271028216" aria-label="Call Nest Match">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -269,31 +269,28 @@
         </div>
       </div>
 
-      <!-- ✅ Left side: logo then copyrights LAST at very bottom -->
+      <!-- ✅ Left side: logo then Note then Copy (Copy LAST) -->
       <div class="footer__left" style="display:flex; flex-direction:column; justify-content:flex-end;">
         <a class="brand brand--footer js-top" href="#pageTop" aria-label="Nest Match" style="order:1;">
           <img class="brand__logo brand__logo--footer" src="assets/logo.png" alt="Nest Match" />
         </a>
 
-        <!-- ✅ last last -->
-        <div class="footer__copy" id="footerCopy" style="order:3;"></div>
         <div class="footer__note" id="footerNote" style="order:2;"></div>
+        <div class="footer__copy" id="footerCopy" style="order:3;"></div>
       </div>
 
     </div>
   </footer>
 
-  <!-- ✅ Remove any visible email text under buttons (if injected by app.js) -->
+  <!-- ✅ Remove any visible email text under note (if injected by app.js) -->
   <script>
     (function(){
       function stripEmailText(){
         var note = document.getElementById('footerNote');
         if (!note) return;
 
-        // remove any mailto links inside footerNote
         note.querySelectorAll('a[href^="mailto:"]').forEach(function(a){ a.remove(); });
 
-        // remove any lines/text nodes containing @ (email-like)
         var walker = document.createTreeWalker(note, NodeFilter.SHOW_TEXT, null);
         var toRemove = [];
         while (walker.nextNode()) {
@@ -302,7 +299,6 @@
         }
         toRemove.forEach(function(t){ t.nodeValue = ''; });
 
-        // normalize spacing
         note.innerHTML = note.innerHTML.replace(/\s{2,}/g,' ').trim();
       }
 
@@ -316,4 +312,3 @@
   <script src="./app.js"></script>
 </body>
 </html>
-
