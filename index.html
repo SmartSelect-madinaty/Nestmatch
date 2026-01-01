@@ -26,7 +26,6 @@
   <meta property="og:url" content="https://nestmatch.github.io/Madinaty/" />
 
   <!-- ✅ OG COVER (Recommended 1200x630 for best preview) -->
-  <!-- ✅ Cache-bust to refresh WhatsApp/Facebook previews -->
   <meta property="og:image" content="https://nestmatch.github.io/Madinaty/assets/og-cover.png?v=2" />
   <meta property="og:image:secure_url" content="https://nestmatch.github.io/Madinaty/assets/og-cover.png?v=2" />
   <meta property="og:image:width" content="1200" />
@@ -99,9 +98,11 @@
       <a class="brand js-top" href="#pageTop" aria-label="Nest Match">
         <img class="brand__logo" src="assets/logo.png" alt="Nest Match" />
       </a>
+
       <!-- Actions on far left -->
       <div class="header__actions">
-        <a class="langbtn" id="langToggle" href="./en.html" aria-label="Switch to English" style="display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1;">EN</a>
+        <a class="langbtn" id="langToggle" href="./en.html" aria-label="Switch to English"
+           style="display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1;">EN</a>
 
         <a class="iconbtn iconbtn--whatsapp" id="waTop" target="_blank" rel="noopener" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -116,8 +117,6 @@
             <path fill="#FFFFFF" d="M13.34 20.86v-6.98h1.46l.28-2.88h-1.74V9.82c0-.5.24-.98 1.02-.98h.79V7.3s-.71-.12-1.4-.12c-1.43 0-2.36.86-2.36 2.42v1.2H9.81v2.88h1.58v6.98h1.95z"/>
           </svg>
         </a>
-
-        <!-- ✅ Email removed from header as requested -->
 
         <a class="iconbtn iconbtn--phone" id="callTop" href="tel:+201271028216" aria-label="Call Nest Match">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -136,7 +135,7 @@
 
           <div class="hmenu__panel" id="hmenuPanel" role="menu" aria-label="Header menu">
             <a class="hmenu__item" role="menuitem" href="#problem">ليه فيه صعوبة فى الوصول للعقار المناسب بمدينتى ؟</a>
-            <a class="hmenu__item" role="menuitem" href="#why">أزاى Nest Match بتقدم الحل؟</a>
+            <a class="hmenu__item" role="menuitem" href="#why">إزاي Nest Match بتقدم الحل؟</a>
             <a class="hmenu__item" role="menuitem" href="#models">استكشف نماذج العمارات</a>
             <a class="hmenu__item" role="menuitem" href="#faq">الأسئلة الشائعة</a>
           </div>
@@ -149,15 +148,16 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero__bg" id="heroBg"></div>
+
     <div class="container hero__content">
       <div class="hero__text">
-        <!-- ✅ FIXED: remove stray parentheses and improve Arabic -->
-        <h1 class="hero__title">تقييم عقاري (لا&nbsp;وساطة&nbsp;—&nbsp;لا&nbsp;عمولة
-)</h1>
+        <!-- ✅ FIXED 100%: no annoying line-break + non-breaking around separators -->
+        <h1 class="hero__title">تقييم عقاري (لا&nbsp;وساطة&nbsp;—&nbsp;لا&nbsp;عمولة)</h1>
+
         <p class="hero__subtitle">تقييم عقاري بتحليل مالي ومعماري يحميك ويساعدك تختار الأفضل بثقة</p>
 
         <div class="hero__cta">
-          <a class="btn btn--gold btn--hero" id="ctaHero" target="_blank" rel="noopener">أطلب تقريرك الأن </a>
+          <a class="btn btn--gold btn--hero" id="ctaHero" target="_blank" rel="noopener">اطلب تقريرك الآن</a>
           <a class="btn btn--gold btn--hero" id="ctaReport" target="_blank" rel="noopener">تحميل نموذج تقرير (PDF)</a>
         </div>
       </div>
@@ -227,58 +227,57 @@
       <div class="faq" id="faqList"></div>
     </div>
   </section>
-
-  <!-- FOOTER -->
+  <!--footer-->
+  
   <footer class="footer" id="contact">
-    <div class="container footer__inner">
+  <div class="container footer__inner">
 
-      <!-- ✅ Right side: CTAs + icons (above) -->
-      <div class="footer__right">
-
-        <!-- ✅ Buttons row (same style + same line) -->
-        <div class="footer__ctaRow" style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn--gold" id="ctaFooter" target="_blank" rel="noopener">اطلب تقريرك الأن</a>
-
-          <!-- ✅ Email as button (same style) -->
-          <a class="btn btn--gold" id="ctaEmailFooter" href="mailto:smartselect.consult@gmail.com" aria-label="Email Nest Match">
-            راسلنا عبر البريد
-          </a>
-        </div>
-
-        <a class="btn btn--gold" id="ctaCallFooter" href="tel:+201271028216" aria-label="Call Nest Match">
-          📞 اتصل بنا
-        </a>
-
-        <div class="footer__icons">
-          <a class="iconbtn iconbtn--whatsapp" id="waFooter" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#25D366" d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .12 5.34.12 11.94c0 2.1.54 4.14 1.56 5.94L0 24l6.3-1.62a11.9 11.9 0 0 0 5.76 1.47h.01c6.6 0 11.94-5.34 11.94-11.94 0-3.19-1.24-6.2-3.49-8.43z"/>
-              <path fill="#FFFFFF" d="M12.07 21.3h-.01c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.74.96.99-3.65-.25-.38a9.25 9.25 0 0 1-1.42-4.95C2.02 6.55 6.6 1.98 12.06 1.98c2.47 0 4.78.96 6.53 2.71a9.14 9.14 0 0 1 2.71 6.53c0 5.06-4.58 10.08-9.23 10.08zm5.37-6.93c-.29-.15-1.71-.84-1.97-.94-.27-.10-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.10-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.23-.56-.47-.49-.65-.5h-.55c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.03.15.19 2.06 3.15 5 4.42.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.12.56-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/>
-            </svg>
-          </a>
-
-          <a class="iconbtn iconbtn--facebook" id="fbFooter" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#1877F2" d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.98 3.66 9.1 8.44 9.86v-6.98H8.9v-2.88h1.58V9.8c0-1.56.93-2.42 2.36-2.42.69 0 1.4.12 1.4.12v1.54h-.79c-.78 0-1.02.48-1.02.98v1.18h1.74l-.28 2.88h-1.46v6.98c4.78-.76 8.44-4.88 8.44-9.86 0-5.5-4.46-9.96-9.96-9.96z"/>
-              <path fill="#FFFFFF" d="M13.34 20.86v-6.98h1.46l.28-2.88h-1.74V9.82c0-.5.24-.98 1.02-.98h.79V7.3s-.71-.12-1.4-.12c-1.43 0-2.36.86-2.36 2.42v1.2H9.81v2.88h1.58v6.98h1.95z"/>
-            </svg>
-          </a>
-        </div>
+    <div class="footer__right">
+      <div class="footer__ctaRow" style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btn--gold" id="ctaFooter" target="_blank" rel="noopener">اطلب تقريرك الأن</a>
       </div>
 
-      <!-- ✅ Left side: logo then copyrights LAST at very bottom -->
-      <div class="footer__left" style="display:flex; flex-direction:column; justify-content:flex-end;">
-        <a class="brand brand--footer js-top" href="#pageTop" aria-label="Nest Match" style="order:1;">
-          <img class="brand__logo brand__logo--footer" src="assets/logo.png" alt="Nest Match" />
+      <div class="footer__icons">
+        <a class="iconbtn iconbtn--whatsapp" id="waFooter" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#25D366" d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .12 5.34.12 11.94c0 2.1.54 4.14 1.56 5.94L0 24l6.3-1.62a11.9 11.9 0 0 0 5.76 1.47h.01c6.6 0 11.94-5.34 11.94-11.94 0-3.19-1.24-6.2-3.49-8.43z"/>
+            <path fill="#FFFFFF" d="M12.07 21.3h-.01c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.74.96.99-3.65-.25-.38a9.25 9.25 0 0 1-1.42-4.95C2.02 6.55 6.6 1.98 12.06 1.98c2.47 0 4.78.96 6.53 2.71a9.14 9.14 0 0 1 2.71 6.53c0 5.06-4.58 10.08-9.23 10.08zm5.37-6.93c-.29-.15-1.71-.84-1.97-.94-.27-.10-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.10-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.23-.56-.47-.49-.65-.5h-.55c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.03.15.19 2.06 3.15 5 4.42.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.12.56-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/>
+          </svg>
         </a>
 
-        <!-- ✅ last last -->
-        <div class="footer__copy" id="footerCopy" style="order:3;"></div>
-        <div class="footer__note" id="footerNote" style="order:2;"></div>
-      </div>
+        <a class="iconbtn iconbtn--facebook" id="fbFooter" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#1877F2" d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.98 3.66 9.1 8.44 9.86v-6.98H8.9v-2.88h1.58V9.8c0-1.56.93-2.42 2.36-2.42.69 0 1.4.12 1.4.12v1.54h-.79c-.78 0-1.02.48-1.02.98v1.18h1.74l-.28 2.88h-1.46v6.98c4.78-.76 8.44-4.88 8.44-9.86 0-5.5-4.46-9.96-9.96-9.96z"/>
+            <path fill="#FFFFFF" d="M13.34 20.86v-6.98h1.46l.28-2.88h-1.74V9.82c0-.5.24-.98 1.02-.98h.79V7.3s-.71-.12-1.4-.12c-1.43 0-2.36.86-2.36 2.42v1.2H9.81v2.88h1.58v6.98h1.95z"/>
+          </svg>
+        </a>
 
+        <a class="iconbtn iconbtn--phone" id="callFooter" href="tel:+201271028216" aria-label="اتصل بنا">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#D0B371" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </a>
+
+        <a class="iconbtn iconbtn--mail" id="emailFooterIcon" href="mailto:smartselect.consult@gmail.com" aria-label="راسلنا عبر البريد">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#D0B371" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
     </div>
-  </footer>
+
+    <div class="footer__left" style="display:flex; flex-direction:column; justify-content:flex-end;">
+      <a class="brand brand--footer js-top" href="#pageTop" aria-label="Nest Match" style="order:1;">
+        <img class="brand__logo brand__logo--footer" src="assets/logo.png" alt="Nest Match" />
+      </a>
+
+      <div class="footer__note" id="footerNote" style="order:2;"></div>
+      <div class="footer__copy" id="footerCopy" style="order:3;"></div>
+    </div>
+
+  </div>
+</footer>
+
 
   <!-- ✅ Remove any visible email text under buttons (if injected by app.js) -->
   <script>
@@ -287,10 +286,8 @@
         var note = document.getElementById('footerNote');
         if (!note) return;
 
-        // remove any mailto links inside footerNote
         note.querySelectorAll('a[href^="mailto:"]').forEach(function(a){ a.remove(); });
 
-        // remove any lines/text nodes containing @ (email-like)
         var walker = document.createTreeWalker(note, NodeFilter.SHOW_TEXT, null);
         var toRemove = [];
         while (walker.nextNode()) {
@@ -299,7 +296,6 @@
         }
         toRemove.forEach(function(t){ t.nodeValue = ''; });
 
-        // normalize spacing
         note.innerHTML = note.innerHTML.replace(/\s{2,}/g,' ').trim();
       }
 
@@ -313,6 +309,3 @@
   <script src="./app.js"></script>
 </body>
 </html>
-
-
-
