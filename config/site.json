@@ -2,6 +2,7 @@
   "links": {
     "whatsapp": "https://wa.me/201271028216",
     "facebook": "https://www.facebook.com/share/1BchPsnvnd/?mibextid=wwXIfr",
+    "email": "info.MadinatySelect@proton.me",
     "requestForm": "https://forms.gle/GsTXZGXXrcypanPd7",
     "reportPdf": "https://drive.google.com/uc?export=download&id=1nIEKPkZXwoC-ElaqLdqDjIngU0xTQ4na"
   },
@@ -14,126 +15,122 @@
     "items": [
       { "img": "assets/models/01.jpg", "caption": "نماذج عمارات مدينتي — واجهات ومساحات" },
       { "img": "assets/models/02.jpg", "caption": "تخطيطات داخلية — كفاءة توزيع المساحة" },
-      { "img": "assets/models/03.jpg", "caption": "اتجاهات وواجهات — تأثير الشمس والتهوية" },
-      { "img": "assets/models/04.jpg", "caption": "إطلالات (View) — جاردن / بارك / شارع رئيسي" },
-      { "img": "assets/models/05.jpg", "caption": "خصوصية الوحدة — مجروحة / غير مجروحة" },
-      { "img": "assets/models/06.jpg", "caption": "مقارنة نماذج — نقاط قوة وضعف كل نموذج" },
-      { "img": "assets/models/07.jpg", "caption": "الموقع داخل المجموعة — قرب الخدمات" },
-      { "img": "assets/models/08.jpg", "caption": "أدوار مختلفة — فروق السعر والقيمة" },
-      { "img": "assets/models/09.jpg", "caption": "تحليل معماري — مساحة فعلية وكفاءة" },
-      { "img": "assets/models/10.jpg", "caption": "تقرير تقييم عقاري — مثال عرض البيانات" }
+      { "img": "assets/models/03.jpg", "caption": "مدى تأثير تصميم الواجهة بالنموذج على الفيو لكل وحدة داخل النموذج" },
+      { "img": "assets/models/04.jpg", "caption": "كفاءة التوزيع والمساحة الصافية" },
+      { "img": "assets/models/05.jpg", "caption": "توضيح الاتجاه الحقيقي للعقار وزاوية الميل" },
+      { "img": "assets/models/06.jpg", "caption": "مقارنات تمكّنك من معرفة اختلافات التوزيع لنفس المساحة" },
+      { "img": "assets/models/07.jpg", "caption": "مدى انفتاح الرؤية — مدى الخصوصية — القرب من الخدمات" },
+      { "img": "assets/models/08.jpg", "caption": "مدى التعرّض للشمس وحرارة كل غرفة" },
+      { "img": "assets/models/09.jpg", "caption": "توضيح الاختلافات بين الفيو الخاص بكل عقار ومساحات الباركنج" },
+      { "img": "assets/models/10.jpg", "caption": "توضيح التفاصيل المالية وتحليلها" }
     ]
   },
   "i18n": {
     "ar": {
-      "nav_problem": "لماذا قرار الشراء في مدينتي صعب؟",
-      "nav_why": "كيف تساعدك Nest Match؟",
-      "nav_models": "استكشف نماذج العمارات",
+      "nav_problem": "ليه اختيار العقار صعب في مدينتي؟",
+      "nav_why": "كيف تقدّم Nest Match الحل؟",
+      "nav_models": "استكشف الفرص (بيانات دقيقة + مقارنات ذكية)",
       "nav_faq": "الأسئلة الشائعة",
       "nav_contact": "تواصل معنا",
-      "cta_request": "اطلب تقريرك الأن",
-      "cta_sample": "تحميل نموذج تقرير (PDF)",
-      "hero_title": "شركة تقيم عقارى ( لا وساطة - لا عمولة )",
-      "hero_subtitle": "تقرير تقييم عقاري (تحليل مالي ومعماري) يساعدك على اختيار الأفضل بثقة في مدينتي",
-      "problem_title": "لماذا يصعب الوصول إلى العقار الأنسب في مدينتي؟",
+      "cta_request": "اطلب تقريرك الآن",
+      "cta_sample": "تحميل نموذج للتقرير (PDF)",
+      "hero_title": "  شركة تقيم عقارى (ليست وساطة ولا نتقاضى عمولات)",
+      "hero_subtitle": "تقرير تقييم عقاري (بيانات دقيقة + تحليل + مقارنات ذكية) يساعدك على اختيار الأفضل بثقة",
+      "problem_title": "ليه هناك صعوبة في اختيار العقار الأنسب بمدينتي؟",
       "why_title": "كيف تقدّم Nest Match الحل؟",
-      "models_title": "استكشف نماذج عمارات مدينتي",
+      "models_title": "استكشف الفرص بمدينتي",
       "faq_title": "الأسئلة الشائعة",
       "faq_subtitle": "",
-      "footer_note": "شركة تقييم عقاري مستقلة — تحليل مالي ومعماري في مدينتي"
+      "footer_note": "شركة تقييم عقاري — تحليل مالي ومعماري في مدينتي"
     },
     "en": {
-      "nav_problem": "Why buying in Madinaty is hard",
-      "nav_why": "How Nest Match helps",
-      "nav_models": "Explore Building Models",
-      "nav_faq": "FAQ",
-      "nav_contact": "Contact",
-      "cta_request": "Request an Evaluation Report",
-      "cta_sample": "Download Sample Report (PDF)",
-      "hero_title": "We don’t sell & we don’t take commissions",
-      "hero_subtitle": "Independent property evaluation (financial & architectural) to help you choose the best with confidence in Madinaty",
-      "problem_title": "Why is choosing the right property in Madinaty difficult?",
-      "why_title": "How does Nest Match help?",
-      "models_title": "Explore Madinaty Building Models",
+      "nav_problem": "Why choosing a property in Madinaty is difficult?",
+      "nav_why": "How does Nest Match provide the solution?",
+      "nav_models": "Explore opportunities (accurate data + smart comparisons)",
+      "nav_faq": "Frequently Asked Questions",
+      "nav_contact": "Contact us",
+      "cta_request": "Request your report now",
+      "cta_sample": "Download a sample report (PDF)",
+      "hero_title": "We do not recommend properties to our clients and we do not take commissions",
+      "hero_subtitle": "A property evaluation report (accurate data + analysis + smart comparisons) that helps you choose the best with confidence",
+      "problem_title": "Why is it difficult to choose the most suitable property in Madinaty?",
+      "why_title": "How does Nest Match provide the solution?",
+      "models_title": "Explore opportunities in Madinaty",
       "faq_title": "Frequently Asked Questions",
       "faq_subtitle": "",
-      "footer_note": "Independent property evaluation — Madinaty"
+      "footer_note": "Property evaluation company — financial and architectural analysis in Madinaty"
     }
   },
   "content": {
     "ar": {
       "problemBullets": [
-        "الإعلانات غالبًا تبرز المميزات وتُهمل عيوبًا مؤثرة مثل ضعف التهوية أو الإطلالة أو الخصوصية.",
-        "لا توجد جهة محايدة بشكل كافٍ؛ كثير من النصائح مرتبطة بالبيع أو العمولة وليس بمصلحة المشتري.",
-        "التفاصيل المالية قد تكون غير مكتملة أو متضاربة (مطلوب/مدفوع/متبقي/ودائع/مصروفات)، ما يسبب مفاجآت وقت التعاقد.",
-        "المقارنة بين الشقق صعبة بسبب نقص البيانات الأساسية: الاتجاه، الفيو الحقيقي، المساحة الفعلية، والتأثيرات المعمارية."
+        "كثرة المعروض في السوق وكثرة العوامل التي يتوقف عليها تسعير العقار بمدينتي.",
+        "عدم توافر البيانات أو عدم دقتها يسبب ارتباكًا للمشتري.",
+        "لا توجد جهة محايدة بشكل كافٍ؛ كثير من النصائح مرتبطة بالبيع أو العمولة وليس بمصلحة المشتري."
       ],
       "whyBullets": [
-        "Nest Match شركة تقييم عقاري مستقلة وليست شركة وساطة: لا نُرشّح وحدات للبيع ولا نتقاضى عمولات، لذلك مصلحتك هي الأولوية.",
-        "تقرير تقييم عقاري شامل يعرض الصورة الكاملة قبل التعاقد: الاتجاهات، الإطلالة، الخصوصية، التعرض للشمس، والمساحة الفعلية وأي نقاط قد تؤثر على القرار.",
+        "Nest Match شركة تقييم عقاري مستقلة وليست شركة وساطة؛ لا نقوم بترشيح عقارات لعملائنا ولا نتقاضى أي عمولات، لذلك مصلحتك هي الأولوية.",
+        "تقرير تقييم عقاري يوضح جميع التفاصيل الخاصة بالعقار (مميزات / عيوب).",
         "تحليل مالي واضح يساعدك على فهم الالتزامات الفعلية ومقارنة البدائل بسهولة قبل توقيع أي عقد.",
-        "نظام تقييم ومقارنة مدعوم بقاعدة بيانات وذكاء اصطناعي لزيادة الدقة وكشف الفروق الحقيقية بين الوحدات."
+        "نظام تقييم مدار من خلال قاعدة بيانات مدعومة بالذكاء الاصطناعي يتيح المقارنة بين آلاف العقارات وكشف الفروق الحقيقية بدقة."
       ],
       "faq": [
         {
-          "q": "كيف أطلب تقرير تقييم عقاري؟",
-          "a": "اضغط على زر (اطلب تقرير تقييم عقاري) وسيتم تحويلك إلى نموذج Google Form لإدخال بيانات الوحدة."
+          "q": "مين ممكن يستفيد من الخدمة؟",
+          "a": "سواء بتشتري من المطور أو إعادة بيع أو حتى هتأجر شقة في مدينتي، تقدر تستفيد من خدماتنا."
         },
         {
-          "q": "هل يوجد نموذج للتقرير؟",
+          "q": "هل ممكن أشوف التقرير اللي بتعملوه؟",
           "a": "نعم، يمكنك تنزيل نموذج تقرير PDF من زر (تحميل نموذج تقرير PDF)."
         },
         {
-          "q": "ما مدة تسليم التقرير؟",
+          "q": "ما هي مدة تسليم التقرير؟",
           "a": "يتم تسليم التقرير خلال 24 ساعة من استلام البيانات كاملة."
         },
         {
-          "q": "هل الخدمة مخصصة لمدينتي فقط؟",
-          "a": "حاليًا نعم. التركيز على مدينتي (وخاصة B14) لضمان أعلى دقة في قاعدة البيانات والتحليل."
+          "q": "تكلفة الحصول على الخدمة؟",
+          "a": "حاليًا بنقدم خصم 60%، فالتكلفة 400 ج.م، والمقارنات على العقارات اللي اتعمل لها تقرير بتكون متاحة بدون تكلفة إضافية."
         },
         {
-          "q": "هل أنتم شركة وساطة أو تقومون بترشيح شقق للبيع؟",
-          "a": "لا. نحن شركة تقييم عقاري مستقلة. لا نبيع ولا نرشّح وحدات ولا نتقاضى عمولات بيع."
+          "q": "هل الخدمة متاحة في أماكن تانية غير مدينتي؟",
+          "a": "حاليًا بنقدم خدماتنا داخل مدينتي فقط، وجارٍ استكمال قاعدة بياناتنا لتشمل باقي المناطق."
         }
       ]
     },
     "en": {
       "problemBullets": [
-        "Listings often highlight the upside and overlook critical drawbacks (sun exposure, privacy, view, noise, layout efficiency).",
-        "Buyers rarely find a truly neutral advisor—many recommendations are influenced by selling or commissions.",
-        "Financial details can be unclear or inconsistent, which leads to surprises at signing (fees, deposits, remaining balance, payment terms).",
-        "Comparing apartments is hard because key data is missing: real orientation, true view, effective area, and architectural impact."
+        "The large supply in the market and the many factors that affect property pricing in Madinaty.",
+        "Lack of data or inaccurate data causes confusion for the buyer.",
+        "There is no sufficiently neutral party; many recommendations are linked to selling or commissions rather than the buyer’s best interest."
       ],
       "whyBullets": [
-        "Nest Match is an independent property evaluation company—not a brokerage. We don’t sell units and we don’t take sales commissions.",
-        "We provide a clear property evaluation report before you sign: orientation, view, privacy, sun exposure, effective area, and key decision factors.",
-        "A financial analysis that makes obligations and trade-offs clear—so you can compare options confidently.",
-        "A data-driven evaluation system backed by a managed database and AI to increase accuracy and reveal real differences."
+        "Nest Match is an independent property evaluation company, not a brokerage. We do not recommend properties to clients and do not take any commissions, so your interest comes first.",
+        "A property evaluation report that presents all property details (advantages / disadvantages).",
+        "A clear financial analysis that helps you understand real obligations and easily compare alternatives before signing any contract.",
+        "An evaluation system managed through an AI-supported database that allows comparison between thousands of properties and reveals real differences accurately."
       ],
       "faq": [
         {
-          "q": "How do I request a property evaluation report?",
-          "a": "Click (Request an Evaluation Report). You’ll be redirected to a Google Form to submit the unit details."
+          "q": "Who can benefit from the service?",
+          "a": "Whether you are buying from a developer, from the resale market, or even renting an apartment in Madinaty, you can benefit from our services."
         },
         {
-          "q": "Is there a sample report?",
-          "a": "Yes. Use the (Download Sample Report PDF) button to download a sample."
+          "q": "Can I see a sample of the report you provide?",
+          "a": "Yes, you can download a PDF sample report from the (Download Sample Report PDF) button."
         },
         {
           "q": "What is the report delivery time?",
-          "a": "Within 24 hours after receiving complete information."
+          "a": "The report is delivered within 24 hours after receiving complete information."
         },
         {
-          "q": "Is the service only for Madinaty?",
-          "a": "Currently yes—Madinaty (especially B14) to ensure maximum accuracy."
+          "q": "What is the cost of the service?",
+          "a": "Currently, we offer a 60% discount, making the cost 400 EGP. Comparisons for properties that have a report are available at no additional cost."
         },
         {
-          "q": "Do you sell units or take commissions?",
-          "a": "No. Nest Match is independent and does not sell properties or take sales commissions."
+          "q": "Is the service available outside Madinaty?",
+          "a": "Currently, our services are available in Madinaty only, and our database is being expanded to cover other areas."
         }
       ]
     }
   }
 }
-
-
